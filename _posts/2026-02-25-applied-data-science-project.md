@@ -22,18 +22,18 @@ The objective of this project is to develop and evaluate supervised machine lear
 Ultimately, the project aims to deliver a reliable and generalizable predictive model that not only performs well statistically, but also provides meaningful business insights for Amazon’s e-commerce operations.
 
 ## Work Accomplished
-I have conducted accomplised as follows:
+I have accomplised as follows:
 
 1. Data Preparation and Cleaning
 The dataset was first examined to ensure quality and consistency. Column names were standardised, data types were verified, and missing values were   checked. The target variable, TotalAmount, was clearly defined to prevent data leakage during modelling.
 
 2. Feature Engineering
 To enhance predictive performance and reflect real business logic, several meaningful features were created:
-.Net Price (after discount)
-.Discount Amount
-.Shipping Cost Ratio
-.Month (extracted from order date)
-.Discount Rate Band (grouped discount levels)
+- Net Price (after discount)
+- Discount Amount
+- Shipping Cost Ratio
+- Month (extracted from order date)
+- Discount Rate Band (grouped discount levels)
 Categorical variables such as Category, Country, and Discount Rate Band were transformed using one-hot encoding to make them suitable for machine learning models.
 
 
