@@ -91,7 +91,22 @@ The first comparison was conducted using a 70/30 train-test split. Among the thr
 
 This initial comparison established Gradient Boosting as the strongest candidate model.![Singlr-Split Model](https://github.com/user-attachments/assets/76fc0ca7-c705-439d-b7e6-1d798c5b0cbc)
 
+Model Comparison After 5-Fold Cross Validation
+To ensure robustness, 5-fold cross-validation was applied.
+- Gradient Boosting maintained the highest average R²
+- It also showed an extremely low standard deviation, indicating high stability
+- Decision Tree showed moderate consistency
+- Decision Tree showed moderate consistency
 
+Cross-validation confirmed that the Gradient Boosting model was not overfitting and generalized well across different subsets of the data. ![5-Fold Cross Validation](https://github.com/user-attachments/assets/eaf73f3a-777c-41e2-98f2-bb61afb8e747)
+
+Final Model Comparison (Single Split vs Cross Validation)
+Comparing single-split results with cross-validation results showed:
+- Minimal performance gap for Gradient Boosting
+- Minimal performance gap for Gradient Boosting
+- Strong evidence of generalization
+
+This reinforced the reliability of the model before further optimization. ![5-Fold Cross Validation](https://github.com/user-attachments/assets/d7e10c5b-702b-496c-b077-50d667019612)
 
 
 
