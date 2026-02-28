@@ -19,50 +19,24 @@ Project Objective
 
 The objective of this project is to develop and evaluate supervised machine learning models to predict the Total Amount of an order. The process includes data cleaning, feature engineering, model comparison, cross-validation, and performance optimisation.
 
-Ultimately, the project aims to deliver a reliable and generalizable predictive model that not only performs well statistically, but also provides meaningful business insights for Amazon’s e-commerce operations.
-
 ## Work Accomplished
+To achieve the objective of predicting Total Amount, the following key activities were completed:
 
-1. Data Preparation and Cleaning
-Key actions taken:
-- Standardised column naming for consistency
-- Checked for missing values and data anomalies
-- Verified data types for numerical and categorical variables
-- Ensured the target variable (TotalAmount) was properly defined   
+- Data Cleaning & Preparation :
+The dataset was reviewed for consistency, missing values, and correct data types. Column names were standardised and the target variable was clearly  defined to prevent data leakage.
 
-2. Feature Engineering
-Key actions taken:
-- Net Price (after discount adjustment)
-- Order Value (quantity × net price)
-- Discount Amount
-- Shipping Cost Ratio (shipping cost relative to order size)
-- Month extracted from order date
-- Discount Rate Band (categorical grouping of discount levels)
+- Feature Engineering :
+Meaningful features were created to better capture business logic, including Net Price, Discount Amount, Shipping Cost Ratio, Month, and Discount Rate Band. Categorical variables were transformed using one-hot encoding.
 
-3. Data Transformation
-- Categorical variables (Category, Country, Discount Rate Band) were converted using one-hot encoding
-- Numerical variables were standardised for linear regression
-- Multicollinearity was checked using Variance Inflation Factor (VIF) for the linear model
-- Data was split into training and testing sets (70/30 split) to ensure fair model evaluation
+- Model Development
+Three regression models were developed and compared: Multiple Linear Regression (baseline), Decision Tree Regressor, and Gradient Boosting Regressor.
 
-4. Model Development
-Three regression-based models were developed and compared:
-- Multiple Linear Regression (baseline)
-- Decision Tree Regressor
-- Decision Tree Regressor
+- Model Evaluation & Validation
+Models were evaluated using R², RMSE, and MAE. A 70/30 train-test split and 5-fold cross-validation were applied to assess predictive accuracy and stability.
 
-Each model was evaluated using:
-- R²
-- RMSE
-- MAE
-- 5-Fold Cross Validation
-
-5. Model Optimization
-Hyperparameter tuning was conducted using GridSearchCV to optimise:
-- Learning rate
-- Tree depth
-- Number of estimators
-- Subsampling ratio
+- Model Optimisation
+Gradient Boosting was selected as the best-performing model. Hyperparameter tuning using GridSearchCV further improved performance while maintaining strong generalization.
+  
 
 ### Data Preparation
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum neque eget nunc mattis eu sollicitudin enim tincidunt. Vestibulum lacus tortor, ultricies id dignissim ac, bibendum in velit. Proin convallis mi ac felis pharetra aliquam. Curabitur dignissim accumsan rutrum. In arcu magna, aliquet vel pretium et, molestie et arcu. Mauris lobortis nulla et felis ullamcorper bibendum. Phasellus et hendrerit mauris. Proin eget nibh a massa vestibulum pretium. Suspendisse eu nisl a ante aliquet bibendum quis a nunc. Praesent varius interdum vehicula. Aenean risus libero, placerat at vestibulum eget, ultricies eu enim. Praesent nulla tortor, malesuada adipiscing adipiscing sollicitudin, adipiscing eget est.
