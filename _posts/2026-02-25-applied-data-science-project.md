@@ -23,7 +23,7 @@ The objective of this project is to develop and evaluate supervised machine lear
 To achieve the objective of predicting Total Amount, the following key activities were completed:
 
 - Data Cleaning & Preparation :
-The dataset was reviewed for consistency, missing values, and correct data types. Column names were standardised and the target variable was clearly  defined to prevent data leakage. ![Data Overview](https://github.com/user-attachments/assets/c3868a1e-9ffe-4cd1-b00b-211d801131dd)
+The dataset was reviewed for consistency, missing values, and correct data types. Column names were standardised and the target variable was clearly  defined to prevent data leakage. ![Data Overview](https://github.com/user-attachments/assets/b6260726-854d-42af-9b2d-48fed4a45316)
 
 - Feature Engineering :
 Meaningful features were created to better capture business logic, including Net Price, Discount Amount, Shipping Cost Ratio, Month, and Discount Rate Band. Categorical variables were transformed using one-hot encoding.
@@ -70,13 +70,14 @@ Data Splitting & Validation:
 - The dataset was split into training and testing sets (70/30 split) to ensure fair performance evaluation. Additionally, 5-fold cross-validation was conducted to assess model stability and generalization capability.
 
 Evaluation Metrics:
-- Models were evaluated using R², RMSE, and MAE to measure explanatory power and prediction error. Cross-validation results provided further confirmation of model robustness. ![Evaluation Framework](https://github.com/user-attachments/assets/0540c0de-bc4e-4010-a76a-cdbadacfd321)
+- Models were evaluated using R², RMSE, and MAE to measure explanatory power and prediction error. Cross-validation results provided further confirmation of model robustness. ![Evaluation Framework](https://github.com/user-attachments/assets/c55004ce-c4a2-4d39-bf54-d23c6c863201)
 
 Model Optimisation:
 - After comparison, Gradient Boosting was selected as the best-performing model. Hyperparameter tuning using GridSearchCV further improved predictive performance while maintaining stability.
 
 Overall, the modelling process was structured to ensure statistical reliability, minimize overfitting, and deliver a high-performing model capable of supporting revenue forecasting in an e-commerce context.
-- 
+
+ 
 ### Evaluation
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum neque eget nunc mattis eu sollicitudin enim tincidunt. Vestibulum lacus tortor, ultricies id dignissim ac, bibendum in velit. Proin convallis mi ac felis pharetra aliquam. Curabitur dignissim accumsan rutrum. In arcu magna, aliquet vel pretium et, molestie et arcu. Mauris lobortis nulla et felis ullamcorper bibendum. Phasellus et hendrerit mauris. Proin eget nibh a massa vestibulum pretium. Suspendisse eu nisl a ante aliquet bibendum quis a nunc. Praesent varius interdum vehicula. Aenean risus libero, placerat at vestibulum eget, ultricies eu enim. Praesent nulla tortor, malesuada adipiscing adipiscing sollicitudin, adipiscing eget est.
 
