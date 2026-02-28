@@ -22,11 +22,8 @@ The objective of this project is to develop and evaluate supervised machine lear
 Ultimately, the project aims to deliver a reliable and generalizable predictive model that not only performs well statistically, but also provides meaningful business insights for Amazon’s e-commerce operations.
 
 ## Work Accomplished
-I have accomplised as follows:
 
 1. Data Preparation and Cleaning
-The project began with an in-depth review of the transactional dataset to understand variable definitions, data types, and potential inconsistencies.
-
 Key actions taken:
 - Standardised column naming for consistency
 - Checked for missing values and data anomalies
@@ -34,16 +31,38 @@ Key actions taken:
 - Ensured the target variable (TotalAmount) was properly defined   
 
 2. Feature Engineering
-Several meaningful features were created to enhance predictive power and better reflect real-world business logic:
-
+Key actions taken:
 - Net Price (after discount adjustment)
 - Order Value (quantity × net price)
 - Discount Amount
 - Shipping Cost Ratio (shipping cost relative to order size)
 - Month extracted from order date
-- Discount Rate Band (categorical grouping of discount levels)   
+- Discount Rate Band (categorical grouping of discount levels)
 
+3. Data Transformation
+- Categorical variables (Category, Country, Discount Rate Band) were converted using one-hot encoding
+- Numerical variables were standardised for linear regression
+- Multicollinearity was checked using Variance Inflation Factor (VIF) for the linear model
+- Data was split into training and testing sets (70/30 split) to ensure fair model evaluation
 
+4. Model Development
+Three regression-based models were developed and compared:
+- Multiple Linear Regression (baseline)
+- Decision Tree Regressor
+- Decision Tree Regressor
+
+Each model was evaluated using:
+- R²
+- RMSE
+- MAE
+- 5-Fold Cross Validation
+
+5. Model Optimization
+Hyperparameter tuning was conducted using GridSearchCV to optimise:
+- Learning rate
+- Tree depth
+- Number of estimators
+- Subsampling ratio
 
 ### Data Preparation
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum neque eget nunc mattis eu sollicitudin enim tincidunt. Vestibulum lacus tortor, ultricies id dignissim ac, bibendum in velit. Proin convallis mi ac felis pharetra aliquam. Curabitur dignissim accumsan rutrum. In arcu magna, aliquet vel pretium et, molestie et arcu. Mauris lobortis nulla et felis ullamcorper bibendum. Phasellus et hendrerit mauris. Proin eget nibh a massa vestibulum pretium. Suspendisse eu nisl a ante aliquet bibendum quis a nunc. Praesent varius interdum vehicula. Aenean risus libero, placerat at vestibulum eget, ultricies eu enim. Praesent nulla tortor, malesuada adipiscing adipiscing sollicitudin, adipiscing eget est.
