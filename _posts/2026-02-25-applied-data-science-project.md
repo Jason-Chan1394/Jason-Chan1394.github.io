@@ -48,11 +48,13 @@ A structured data preparation process was conducted to ensure the dataset was ac
   - Order Value (Quantity × Net Price)
   - Shipping Cost Ratio (Shipping Cost relative to Order Value)
   - Discount Rate Band (grouped discount levels)
+  - ![New Features](https://github.com/user-attachments/assets/8ef16d02-c9be-4686-a86a-2ffd1d0d0ae0)
+
 - Feature Validation: Key engineered features were validated visually to ensure logical consistency:
-  - Unit Price vs Net Price: Confirmed that net price decreases appropriately as discounts increase. ![Unit Price vs Net Price](https://github.com/user-attachments/assets/4c5eb70d-8998-45ab-8034-36d1dc02956b)
+  - Unit Price vs Net Price: Confirmed that net price decreases appropriately as discounts increase. ![Unit Price vs Net Price](https://github.com/user-attachments/assets/dcf43d52-56d1-4433-a171-ea6aff9c66c1)
   - Quantity vs Order Value: Verified that higher quantities lead to proportionally higher order values. ![Quantity vs Order Value](https://github.com/user-attachments/assets/a6ec55f5-f67e-45a0-87da-c424dc598f66)
   - Shipping Cost vs Shipping Cost Ratio: Ensured the ratio behaves logically, increasing when shipping cost is high relative to order size. ![Shipping Cost vs Shipping Cost Ratio](https://github.com/user-attachments/assets/c499bbc9-78f4-47ec-abac-21f33e5dede3)
-- Categorical Encoding: Country, Category, and Discount Rate Band were transformed using one-hot encoding to prepare the dataset for regression modelling.
+- Categorical Encoding: Country, Category, and Discount Rate Band were transformed using one-hot encoding to prepare the dataset for regression modelling. ![One-Hot Encoding](https://github.com/user-attachments/assets/0f0dc93a-8fec-4687-b23e-700c653d70fc)
 
 
 ### Modelling
