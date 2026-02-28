@@ -37,9 +37,23 @@ Models were evaluated using R², RMSE, and MAE. A 70/30 train-test split and 5-f
 - Model Optimisation
 Gradient Boosting was selected as the best-performing model. Hyperparameter tuning using GridSearchCV further improved performance while maintaining strong generalization.
   
-
 ### Data Preparation
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum neque eget nunc mattis eu sollicitudin enim tincidunt. Vestibulum lacus tortor, ultricies id dignissim ac, bibendum in velit. Proin convallis mi ac felis pharetra aliquam. Curabitur dignissim accumsan rutrum. In arcu magna, aliquet vel pretium et, molestie et arcu. Mauris lobortis nulla et felis ullamcorper bibendum. Phasellus et hendrerit mauris. Proin eget nibh a massa vestibulum pretium. Suspendisse eu nisl a ante aliquet bibendum quis a nunc. Praesent varius interdum vehicula. Aenean risus libero, placerat at vestibulum eget, ultricies eu enim. Praesent nulla tortor, malesuada adipiscing adipiscing sollicitudin, adipiscing eget est.
+A structured data preparation process was conducted to ensure the dataset was accurate, consistent, and ready for modelling.
+
+- Data Quality Checks: Missing values and duplicate records were reviewed to prevent bias and ensure transaction integrity. Categorical variables were examined for inconsistent or abnormal entries.
+- Date Transformation: The Order Date field was converted into datetime format, and yearly transaction summaries were generated to validate temporal consistency and overall transaction trends. ![Yearly Transaction Distribution](https://github.com/user-attachments/assets/fdde292b-3334-4e8a-a5d3-f436d9f093d8)
+- Feature Engineering: Several business-driven features were created to better reflect pricing and logistics dynamics:
+  - Net Price (adjusted unit price after discount)
+  - Discount Amount (monetary value of discount applied)
+  - Order Value (Quantity × Net Price)
+  - Shipping Cost Ratio (Shipping Cost relative to Order Value)
+  - Discount Rate Band (grouped discount levels)
+- Feature Validation: Key engineered features were validated visually to ensure logical consistency:
+  - Unit Price vs Net Price: Confirmed that net price decreases appropriately as discounts increase. ![Unit Price vs Net Price](https://github.com/user-attachments/assets/4c5eb70d-8998-45ab-8034-36d1dc02956b)
+  - Quantity vs Order Value: Verified that higher quantities lead to proportionally higher order values. ![Quantity vs Order Value](https://github.com/user-attachments/assets/a6ec55f5-f67e-45a0-87da-c424dc598f66)
+  - Shipping Cost vs Shipping Cost Ratio: Ensured the ratio behaves logically, increasing when shipping cost is high relative to order size. ![Shipping Cost vs Shipping Cost Ratio](https://github.com/user-attachments/assets/c499bbc9-78f4-47ec-abac-21f33e5dede3)
+- Categorical Encoding: Country, Category, and Discount Rate Band were transformed using one-hot encoding to prepare the dataset for regression modelling.
+
 
 ### Modelling
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum neque eget nunc mattis eu sollicitudin enim tincidunt. Vestibulum lacus tortor, ultricies id dignissim ac, bibendum in velit. Proin convallis mi ac felis pharetra aliquam. Curabitur dignissim accumsan rutrum. In arcu magna, aliquet vel pretium et, molestie et arcu. Mauris lobortis nulla et felis ullamcorper bibendum. Phasellus et hendrerit mauris. Proin eget nibh a massa vestibulum pretium. Suspendisse eu nisl a ante aliquet bibendum quis a nunc. Praesent varius interdum vehicula. Aenean risus libero, placerat at vestibulum eget, ultricies eu enim. Praesent nulla tortor, malesuada adipiscing adipiscing sollicitudin, adipiscing eget est.
