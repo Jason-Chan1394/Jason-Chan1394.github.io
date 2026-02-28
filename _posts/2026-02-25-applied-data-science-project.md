@@ -23,7 +23,7 @@ The objective of this project is to develop and evaluate supervised machine lear
 To achieve the objective of predicting Total Amount, the following key activities were completed:
 
 - Data Cleaning & Preparation :
-The dataset was reviewed for consistency, missing values, and correct data types. Column names were standardised and the target variable was clearly  defined to prevent data leakage.
+The dataset was reviewed for consistency, missing values, and correct data types. Column names were standardised and the target variable was clearly  defined to prevent data leakage. ![Data Overview](https://github.com/user-attachments/assets/c3868a1e-9ffe-4cd1-b00b-211d801131dd)
 
 - Feature Engineering :
 Meaningful features were created to better capture business logic, including Net Price, Discount Amount, Shipping Cost Ratio, Month, and Discount Rate Band. Categorical variables were transformed using one-hot encoding.
@@ -58,8 +58,25 @@ A structured data preparation process was conducted to ensure the dataset was ac
 
 
 ### Modelling
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum neque eget nunc mattis eu sollicitudin enim tincidunt. Vestibulum lacus tortor, ultricies id dignissim ac, bibendum in velit. Proin convallis mi ac felis pharetra aliquam. Curabitur dignissim accumsan rutrum. In arcu magna, aliquet vel pretium et, molestie et arcu. Mauris lobortis nulla et felis ullamcorper bibendum. Phasellus et hendrerit mauris. Proin eget nibh a massa vestibulum pretium. Suspendisse eu nisl a ante aliquet bibendum quis a nunc. Praesent varius interdum vehicula. Aenean risus libero, placerat at vestibulum eget, ultricies eu enim. Praesent nulla tortor, malesuada adipiscing adipiscing sollicitudin, adipiscing eget est.
+The modelling phase began with a correlation analysis to better understand the relationships between key variables and the target variable, TotalAmount. The correlation matrix helped identify meaningful predictors such as quantity, shipping-related variables, and pricing components, while also checking for potential multicollinearity issues before model development. ![Correlation Matrix](https://github.com/user-attachments/assets/b55cf54f-7483-4147-a58e-12678f72bd9f)
 
+Following this initial assessment, three regression models were developed and compared:
+- Multiple Linear Regression as a baseline model to assess linear relationships.
+- Multiple Linear Regression as a baseline model to assess linear relationships.
+- Gradient Boosting Regressor as an ensemble method to improve predictive accuracy.
+The goal was to compare a linear model against non-linear and ensemble methods to determine which best captures complex e-commerce transaction patterns.
+
+Data Splitting & Validation:
+- The dataset was split into training and testing sets (70/30 split) to ensure fair performance evaluation. Additionally, 5-fold cross-validation was conducted to assess model stability and generalization capability.
+
+Evaluation Metrics:
+- Models were evaluated using R², RMSE, and MAE to measure explanatory power and prediction error. Cross-validation results provided further confirmation of model robustness. ![Evaluation Framework](https://github.com/user-attachments/assets/0540c0de-bc4e-4010-a76a-cdbadacfd321)
+
+Model Optimisation:
+- After comparison, Gradient Boosting was selected as the best-performing model. Hyperparameter tuning using GridSearchCV further improved predictive performance while maintaining stability.
+
+After comparison, Gradient Boosting was selected as the best-performing model. Hyperparameter tuning using GridSearchCV further improved predictive performance while maintaining stability.
+- 
 ### Evaluation
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum neque eget nunc mattis eu sollicitudin enim tincidunt. Vestibulum lacus tortor, ultricies id dignissim ac, bibendum in velit. Proin convallis mi ac felis pharetra aliquam. Curabitur dignissim accumsan rutrum. In arcu magna, aliquet vel pretium et, molestie et arcu. Mauris lobortis nulla et felis ullamcorper bibendum. Phasellus et hendrerit mauris. Proin eget nibh a massa vestibulum pretium. Suspendisse eu nisl a ante aliquet bibendum quis a nunc. Praesent varius interdum vehicula. Aenean risus libero, placerat at vestibulum eget, ultricies eu enim. Praesent nulla tortor, malesuada adipiscing adipiscing sollicitudin, adipiscing eget est.
 
