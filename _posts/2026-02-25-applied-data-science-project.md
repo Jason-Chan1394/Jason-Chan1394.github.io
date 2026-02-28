@@ -79,7 +79,20 @@ Overall, the modelling process was structured to ensure statistical reliability,
 
  
 ### Evaluation
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum neque eget nunc mattis eu sollicitudin enim tincidunt. Vestibulum lacus tortor, ultricies id dignissim ac, bibendum in velit. Proin convallis mi ac felis pharetra aliquam. Curabitur dignissim accumsan rutrum. In arcu magna, aliquet vel pretium et, molestie et arcu. Mauris lobortis nulla et felis ullamcorper bibendum. Phasellus et hendrerit mauris. Proin eget nibh a massa vestibulum pretium. Suspendisse eu nisl a ante aliquet bibendum quis a nunc. Praesent varius interdum vehicula. Aenean risus libero, placerat at vestibulum eget, ultricies eu enim. Praesent nulla tortor, malesuada adipiscing adipiscing sollicitudin, adipiscing eget est.
+The evaluation process was designed to ensure that the selected model was not only accurate, but also stable and reliable across different validation methods.
+
+Single-Split Model Comparison
+The first comparison was conducted using a 70/30 train-test split. Among the three models tested, Gradient Boosting clearly outperformed the others.
+
+- Gradient Boosting achieved the highest R² and lowest RMSE and MAE
+- Gradient Boosting achieved the highest R² and lowest RMSE and MAE
+- Decision Tree performed moderately well but showed higher prediction error
+
+This initial comparison established Gradient Boosting as the strongest candidate model.![Singlr-Split Model](https://github.com/user-attachments/assets/76fc0ca7-c705-439d-b7e6-1d798c5b0cbc)
+
+
+
+
 
 ## Recommendation and Analysis
 
