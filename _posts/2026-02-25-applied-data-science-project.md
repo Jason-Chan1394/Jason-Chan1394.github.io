@@ -70,7 +70,8 @@ Data Splitting & Validation:
 - The dataset was split into training and testing sets (70/30 split) to ensure fair performance evaluation. Additionally, 5-fold cross-validation was conducted to assess model stability and generalization capability.
 
 Evaluation Metrics:
-- Models were evaluated using R², RMSE, and MAE to measure explanatory power and prediction error. Cross-validation results provided further confirmation of model robustness. ![Evaluation Framework](https://github.com/user-attachments/assets/049e26b1-a1d8-40b5-9de6-cc5374be58d2)
+- Models were evaluated using R², RMSE, and MAE to measure explanatory power and prediction error. Cross-validation results provided further confirmation of model robustness.
+![Evaluation Framework](https://github.com/user-attachments/assets/049e26b1-a1d8-40b5-9de6-cc5374be58d2)
 
 Model Optimisation:
 - After comparison, Gradient Boosting was selected as the best-performing model. Hyperparameter tuning using GridSearchCV further improved predictive performance while maintaining stability.
