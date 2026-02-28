@@ -54,7 +54,7 @@ A structured data preparation process was conducted to ensure the dataset was ac
   - Unit Price vs Net Price: Confirmed that net price decreases appropriately as discounts increase. ![Unit Price vs Net Price](https://github.com/user-attachments/assets/dcf43d52-56d1-4433-a171-ea6aff9c66c1)
   - Quantity vs Order Value: Verified that higher quantities lead to proportionally higher order values. ![Quantity vs Order Value](https://github.com/user-attachments/assets/a6ec55f5-f67e-45a0-87da-c424dc598f66)
   - Shipping Cost vs Shipping Cost Ratio: Ensured the ratio behaves logically, increasing when shipping cost is high relative to order size. ![Shipping Cost vs Shipping Cost Ratio](https://github.com/user-attachments/assets/c499bbc9-78f4-47ec-abac-21f33e5dede3)
-- Categorical Encoding: Country, Category, and Discount Rate Band were transformed using one-hot encoding to prepare the dataset for regression modelling. ![One-Hot Encoding](https://github.com/user-attachments/assets/0f0dc93a-8fec-4687-b23e-700c653d70fc)
+- Categorical Encoding: Country, Category, and Discount Rate Band were transformed using one-hot encoding to prepare the dataset for regression modelling. 
 
 
 ### Modelling
@@ -75,7 +75,7 @@ Evaluation Metrics:
 Model Optimisation:
 - After comparison, Gradient Boosting was selected as the best-performing model. Hyperparameter tuning using GridSearchCV further improved predictive performance while maintaining stability.
 
-After comparison, Gradient Boosting was selected as the best-performing model. Hyperparameter tuning using GridSearchCV further improved predictive performance while maintaining stability.
+Overall, the modelling process was structured to ensure statistical reliability, minimize overfitting, and deliver a high-performing model capable of supporting revenue forecasting in an e-commerce context.
 - 
 ### Evaluation
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum neque eget nunc mattis eu sollicitudin enim tincidunt. Vestibulum lacus tortor, ultricies id dignissim ac, bibendum in velit. Proin convallis mi ac felis pharetra aliquam. Curabitur dignissim accumsan rutrum. In arcu magna, aliquet vel pretium et, molestie et arcu. Mauris lobortis nulla et felis ullamcorper bibendum. Phasellus et hendrerit mauris. Proin eget nibh a massa vestibulum pretium. Suspendisse eu nisl a ante aliquet bibendum quis a nunc. Praesent varius interdum vehicula. Aenean risus libero, placerat at vestibulum eget, ultricies eu enim. Praesent nulla tortor, malesuada adipiscing adipiscing sollicitudin, adipiscing eget est.
