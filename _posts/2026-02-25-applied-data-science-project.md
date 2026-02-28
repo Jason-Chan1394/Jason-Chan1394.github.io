@@ -25,16 +25,23 @@ Ultimately, the project aims to deliver a reliable and generalizable predictive 
 I have accomplised as follows:
 
 1. Data Preparation and Cleaning
-The dataset was first examined to ensure quality and consistency. Column names were standardised, data types were verified, and missing values were   checked. The target variable, TotalAmount, was clearly defined to prevent data leakage during modelling.
+The project began with an in-depth review of the transactional dataset to understand variable definitions, data types, and potential inconsistencies.
+
+Key actions taken:
+- Standardised column naming for consistency
+- Checked for missing values and data anomalies
+- Verified data types for numerical and categorical variables
+- Ensured the target variable (TotalAmount) was properly defined   
 
 2. Feature Engineering
-To enhance predictive performance and reflect real business logic, several meaningful features were created:
-- Net Price (after discount)
+Several meaningful features were created to enhance predictive power and better reflect real-world business logic:
+
+- Net Price (after discount adjustment)
+- Order Value (quantity × net price)
 - Discount Amount
-- Shipping Cost Ratio
-- Month (extracted from order date)
-- Discount Rate Band (grouped discount levels)
-Categorical variables such as Category, Country, and Discount Rate Band were transformed using one-hot encoding to make them suitable for machine learning models.
+- Shipping Cost Ratio (shipping cost relative to order size)
+- Month extracted from order date
+- Discount Rate Band (categorical grouping of discount levels)   
 
 
 
