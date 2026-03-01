@@ -136,12 +136,21 @@ This indicates that shipping-related pricing structure and basket size are the d
 
 ## Recommendation and Analysis
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum neque eget nunc mattis eu sollicitudin enim tincidunt. Vestibulum lacus tortor, ultricies id dignissim ac, bibendum in velit. Proin convallis mi ac felis pharetra aliquam. Curabitur dignissim accumsan rutrum. In arcu magna, aliquet vel pretium et, molestie et arcu. Mauris lobortis nulla et felis ullamcorper bibendum. Phasellus et hendrerit mauris. Proin eget nibh a massa vestibulum pretium. Suspendisse eu nisl a ante aliquet bibendum quis a nunc. Praesent varius interdum vehicula. Aenean risus libero, placerat at vestibulum eget, ultricies eu enim. Praesent nulla tortor, malesuada adipiscing adipiscing sollicitudin, adipiscing eget est.
+The analysis shows that shipping-related factors and basket size play a central role in determining the Total Amount of an order. In particular, Shipping Cost Ratio emerged as the strongest driver, indicating that the relative burden of shipping costs significantly influences overall transaction value. This suggests that customers’ spending behaviour is closely tied to how shipping charges are structured in relation to the products they purchase.
+
+The analysis shows that shipping-related factors and basket size play a central role in determining the Total Amount of an order. In particular, Shipping Cost Ratio emerged as the strongest driver, indicating that the relative burden of shipping costs significantly influences overall transaction value. This suggests that customers’ spending behaviour is closely tied to how shipping charges are structured in relation to the products they purchase.
+
+Based on these findings, the following recommendations are proposed:
+- Optimize shipping pricing strategies, ensuring fees are structured to encourage higher basket value without negatively affecting conversion rates
+- Promote bundle purchasing or multi-item discounts to increase average quantity per order
+- Monitor shipping-to-order ratio metrics as part of pricing and logistics performance dashboards
+
+Overall, integrating predictive analytics into pricing and logistics decisions can support more informed, data-driven strategies and improve revenue predictability within Amazon e-commerence business.
 
 ## AI Ethics
 Discuss the potential data science ethics issues (privacy, fairness, accuracy, accountability, transparency) in your project. 
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum neque eget nunc mattis eu sollicitudin enim tincidunt. Vestibulum lacus tortor, ultricies id dignissim ac, bibendum in velit. Proin convallis mi ac felis pharetra aliquam. Curabitur dignissim accumsan rutrum. In arcu magna, aliquet vel pretium et, molestie et arcu. Mauris lobortis nulla et felis ullamcorper bibendum. Phasellus et hendrerit mauris. Proin eget nibh a massa vestibulum pretium. Suspendisse eu nisl a ante aliquet bibendum quis a nunc. Praesent varius interdum vehicula. Aenean risus libero, placerat at vestibulum eget, ultricies eu enim. Praesent nulla tortor, malesuada adipiscing adipiscing sollicitudin, adipiscing eget est.
+
 
 ## Source Codes and Datasets
 Upload your model files and dataset into a GitHub repo and add the link here. 
