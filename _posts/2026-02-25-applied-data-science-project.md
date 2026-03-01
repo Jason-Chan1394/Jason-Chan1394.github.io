@@ -15,9 +15,6 @@ Business Goal
 
 The main business goal is to improve revenue forecasting and support more informed pricing and shipping decisions. By identifying which variables most strongly impact total order value, the model can help guide operational and strategic planning within an e-commerce environment.
 
-Project Objective
-
-The objective of this project is to develop and evaluate supervised machine learning models to predict the Total Amount of an order. The process includes data cleaning, feature engineering, model comparison, cross-validation, and performance optimisation.
 
 ## Work Accomplished
 To achieve the objective of predicting Total Amount, the following key activities were completed:
