@@ -32,6 +32,7 @@ To achieve the objective of predicting Total Amount, the following key activitie
     - Decision Tree Regressor
     - Gradient Boosting Regressor
 
+
 - Model Evaluation & Validation:
   Models were evaluated using R², RMSE, and MAE. A 70/30 train-test split and 5-fold cross-validation were applied to assess predictive accuracy and       stability.
 
@@ -53,6 +54,7 @@ A structured data preparation process was conducted to ensure the dataset was ac
   - Discount Rate Band (grouped discount levels)
   - ![New Features](https://github.com/user-attachments/assets/8ef16d02-c9be-4686-a86a-2ffd1d0d0ae0)
 
+
 - Feature Validation: Key engineered features were validated visually to ensure logical consistency:
   - Unit Price vs Net Price: Confirmed that net price decreases appropriately as discounts increase. ![Unit Price vs Net Price](https://github.com/user-attachments/assets/dcf43d52-56d1-4433-a171-ea6aff9c66c1)
   
@@ -71,7 +73,8 @@ The modelling phase began with a correlation analysis to better understand the r
 Following this initial assessment, three regression models were developed and compared:
 - Multiple Linear Regression as a baseline model to assess linear relationships
 - Decision Tree Regressor to capture non-linear interactions
-- Gradient Boosting Regressor as an ensemble method to improve predictive accuracy
+- Gradient Boosting Regressor as an ensemble method to improve predictive accuracy.
+
 The goal was to compare a linear model against non-linear and ensemble methods to determine which best captures complex e-commerce transaction patterns.
 
 Data Splitting & Validation:
@@ -89,18 +92,20 @@ Overall, the modelling process was structured to ensure statistical reliability,
 ### Evaluation
 The evaluation process was designed to ensure that the selected model was not only accurate, but also stable and reliable across different validation methods.
 
-Single-Split Model Comparison
+Single-Split Model Comparison:
 The first comparison was conducted using a 70/30 train-test split. Among the three models tested, Gradient Boosting clearly outperformed the others.
+
 - Gradient Boosting achieved the highest R² and lowest RMSE and MAE
 - Decision Tree performed moderately well but showed higher prediction error
-- Decision Tree Regressor to capture non-linear interactions
+- Multiple Linear Regression demonstrated underfitting, indicating that linear assumptions were insufficient to capture complex pricing and shipping       interactions
 
 This initial comparison established Gradient Boosting as the strongest candidate model.
 ![Single Split Model](https://github.com/user-attachments/assets/7b031212-05eb-49ef-a164-930648254479)
 
 
-Model Comparison After 5-Fold Cross Validation
+Model Comparison After 5-Fold Cross Validation:
 To ensure robustness, 5-fold cross-validation was applied.
+
 - Gradient Boosting maintained the highest average R²
 - It also showed an extremely low standard deviation, indicating high stability
 - Decision Tree showed moderate consistency
@@ -108,7 +113,7 @@ To ensure robustness, 5-fold cross-validation was applied.
 
 Cross-validation confirmed that the Gradient Boosting model was not overfitting and generalized well across different subsets of the data. ![5-Fold Cross Validation](https://github.com/user-attachments/assets/eaf73f3a-777c-41e2-98f2-bb61afb8e747)
 
-Final Model Comparison (Single Split vs Cross Validation)
+Final Model Comparison (Single Split vs Cross Validation):
 Comparing single-split results with cross-validation results showed:
 - Minimal performance gap for Gradient Boosting
 - Very consistent R² values between test and cross-validation
@@ -116,8 +121,9 @@ Comparing single-split results with cross-validation results showed:
 
 This reinforced the reliability of the model before further optimization. ![5-Fold Cross Validation](https://github.com/user-attachments/assets/d7e10c5b-702b-496c-b077-50d667019612)
 
-Before and After Hyperparameter Tuning
+Before and After Hyperparameter Tuning:
 Hyperparameter tuning using GridSearchCV further improved the Gradient Boosting model.
+
 - R² increased significantly
 - RMSE and MAE were substantially reduced
 - Model stability remained strong
@@ -146,27 +152,27 @@ Based on these findings, the following recommendations are proposed:
 - Promote bundle purchasing or multi-item discounts to increase average quantity per order
 - Monitor shipping-to-order ratio metrics as part of pricing and logistics performance dashboards
 
-Overall, integrating predictive analytics into pricing and logistics decisions can support more informed, data-driven strategies and improve revenue predictability within Amazon e-commerence business.
+Overall, integrating predictive analytics into pricing and logistics decisions can support more informed, data-driven strategies and improve revenue predictability for Amazon e-commerence business.
 
 
 ## AI Ethics
 
-While this project focuses on predicting Total Amount using transactional data, it is important to consider the ethical implications of applying data science in an e-commerce environment.
+While this project focuses on predicting Total Amount using transactional data, it is important to consider the ethical implications of applying data science in an e-commerce business.
 
 Privacy:
-  - Although the dataset used does not contain personally identifiable information, transactional data can still reveal purchasing patterns and behavioural          insights. In real-world applications, strict data protection policies and anonymisation practices must be enforced to safeguard customer privacy.
+  - Although the dataset used does not contain personally identifiable information, transactional data can still reveal purchasing patterns and behavioural insights. In real-world applications, strict data protection policies and anonymisation practices must be enforced to safeguard customer privacy.
 
 Fairness:
-  - Features such as country or location may indirectly influence pricing or revenue predictions. Care must be taken to ensure that predictive models do not         unintentionally disadvantage specific customer groups or regions. Continuous monitoring is necessary to prevent biased outcomes.
+  - Features such as country or location may indirectly influence pricing or revenue predictions. Care must be taken to ensure that predictive models do not unintentionally disadvantage specific customer groups or regions. Continuous monitoring is necessary to prevent biased outcomes.
 
 Accuracy:
-  - While the model demonstrates strong predictive performance, no model is perfectly accurate. Decisions based solely on automated predictions may lead to         incorrect pricing or operational strategies if not carefully validated. Human oversight remains important.
+  - While the model demonstrates strong predictive performance, no model is perfectly accurate. Decisions based solely on automated predictions may lead to incorrect pricing or operational strategies if not carefully validated. Human oversight remains important.
 
 Accountability:
-  - Clear responsibility should be defined when deploying predictive models in real business environment. Business stakeholders must understand how model outputs   are used in decision-making, particularly if they influence pricing or logistics strategies.
+  - Clear responsibility should be defined when deploying predictive models in real business environment. Business stakeholders must understand how model outputs are used in decision-making, particularly if they influence pricing or logistics strategies.
 
 Transparency:
-  - Using interpretable techniques such as feature importance analysis helps explain which factors drive predictions. Transparency is essential to build trust in   data-driven systems and ensure that decisions can be justified and audited when necessary.
+  - Using interpretable techniques such as feature importance analysis helps explain which factors drive predictions. Transparency is essential to build trust in data-driven systems and ensure that decisions can be justified and audited when necessary.
 
 
 
