@@ -42,8 +42,9 @@ To achieve the objective of predicting Total Amount, the following key activitie
 ### Data Preparation
 A structured data preparation process was conducted to ensure the dataset was accurate, consistent, and ready for modelling.
 
-- Data Quality Checks: Missing values and duplicate records were reviewed to prevent bias and ensure transaction integrity. Categorical variables were examined for inconsistent or abnormal entries.
-- Date Transformation: The Order Date field was converted into datetime format, and yearly transaction summaries were generated to validate temporal consistency and overall transaction trends. ![Yearly Transaction Distribution](https://github.com/user-attachments/assets/fdde292b-3334-4e8a-a5d3-f436d9f093d8)
+- Data Quality Checks: Missing values and duplicate records were reviewed to prevent bias and ensure transaction integrity. Categorical variables were     examined for inconsistent or abnormal entries.
+  
+- Date Transformation: The Order Date field was converted into datetime format, and yearly transaction summaries were generated to validate temporal       consistency and overall transaction trends. ![Yearly Transaction Distribution](https://github.com/user-attachments/assets/fdde292b-3334-4e8a-a5d3-f436d9f093d8)
 - Feature Engineering: Several business-driven features were created to better reflect pricing and logistics dynamics:
   - Net Price (adjusted unit price after discount)
   - Discount Amount (monetary value of discount applied)
@@ -54,9 +55,12 @@ A structured data preparation process was conducted to ensure the dataset was ac
 
 - Feature Validation: Key engineered features were validated visually to ensure logical consistency:
   - Unit Price vs Net Price: Confirmed that net price decreases appropriately as discounts increase. ![Unit Price vs Net Price](https://github.com/user-attachments/assets/dcf43d52-56d1-4433-a171-ea6aff9c66c1)
+  
   - Quantity vs Order Value: Verified that higher quantities lead to proportionally higher order values. ![Quantity vs Order Value](https://github.com/user-attachments/assets/a6ec55f5-f67e-45a0-87da-c424dc598f66)
+  
   - Shipping Cost vs Shipping Cost Ratio: Ensured the ratio behaves logically, increasing when shipping cost is high relative to order size. ![Shipping Cost vs Shipping Cost Ratio](https://github.com/user-attachments/assets/c499bbc9-78f4-47ec-abac-21f33e5dede3)
-- Categorical Encoding: Country, Category, and Discount Rate Band were transformed using one-hot encoding to prepare the dataset for regression modelling. 
+  
+  - Categorical Encoding: Country, Category, and Discount Rate Band were transformed using one-hot encoding to prepare the dataset for regression            modelling. 
 
 
 ### Modelling
