@@ -64,12 +64,13 @@ A structured data preparation process was conducted to ensure the dataset was ac
 
 
 ### Modelling
-The modelling phase began with a correlation analysis to better understand the relationships between key variables and the target variable, TotalAmount. The correlation matrix helped identify meaningful predictors such as quantity, shipping-related variables, and pricing components, while also checking for potential multicollinearity issues before model development. ![Correlation Matrix](https://github.com/user-attachments/assets/b55cf54f-7483-4147-a58e-12678f72bd9f)
+The modelling phase began with a correlation analysis to better understand the relationships between key variables and the target variable, TotalAmount. The correlation matrix helped identify meaningful predictors such as quantity, shipping-related variables, and pricing components, while also checking for potential multicollinearity issues before model development. 
+![Correlation Matrix](https://github.com/user-attachments/assets/b55cf54f-7483-4147-a58e-12678f72bd9f)
 
 Following this initial assessment, three regression models were developed and compared:
-- Multiple Linear Regression as a baseline model to assess linear relationships.
-- Multiple Linear Regression as a baseline model to assess linear relationships.
-- Gradient Boosting Regressor as an ensemble method to improve predictive accuracy.
+- Multiple Linear Regression as a baseline model to assess linear relationships
+- Decision Tree Regressor to capture non-linear interactions
+- Gradient Boosting Regressor as an ensemble method to improve predictive accuracy
 The goal was to compare a linear model against non-linear and ensemble methods to determine which best captures complex e-commerce transaction patterns.
 
 Data Splitting & Validation:
@@ -79,7 +80,7 @@ Evaluation Metrics:
 - Models were evaluated using R², RMSE, and MAE to measure explanatory power and prediction error. Cross-validation results provided further confirmation of model robustness. ![Evaluation Framework](https://github.com/user-attachments/assets/09088412-913d-4f72-86a9-73c97af91cce)
 
 Model Optimisation:
-- After comparison, Gradient Boosting was selected as the best-performing model. Hyperparameter tuning using GridSearchCV further improved predictive performance while maintaining stability.
+- After comparison, hyperparameter tuning using GridSearchCV further improved predictive performance while maintaining stability.
 
 Overall, the modelling process was structured to ensure statistical reliability, minimize overfitting, and deliver a high-performing model capable of supporting revenue forecasting in an e-commerce context.
 
