@@ -121,7 +121,8 @@ Hyperparameter tuning using GridSearchCV further improved the Gradient Boosting 
 - RMSE and MAE were substantially reduced
 - Model stability remained strong
 
-The tuned model demonstrated both higher predictive accuracy and improved bias–variance balance.![Hyperparameter Tuning](https://github.com/user-attachments/assets/0eebd971-2a41-4e07-ad41-5e56c9a266d7)
+The tuned model demonstrated both higher predictive accuracy and improved bias–variance balance.
+![Hyperparameter Tuning](https://github.com/user-attachments/assets/c744d7d6-3993-491e-9ab5-adead18ef5f6)
 
 Top 3 Feature Importance
 Feature importance analysis from the final tuned model revealed the most influential drivers of Total Amount:
