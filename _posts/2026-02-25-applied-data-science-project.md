@@ -5,6 +5,7 @@ title: "Applied Data Science Project Documentation"
 categories: ITD214
 ---
 ## Project Background
+
 Overview
 
 In the fast-paced world of e-commerce, understanding what drives customer spending is essential for sustainable growth. With large volumes of transactional data available, businesses have the opportunity to move beyond intuition and rely on data-driven insights to support pricing, logistics, and revenue planning decisions.
@@ -20,19 +21,23 @@ The main business goal is to improve revenue forecasting and support more inform
 To achieve the objective of predicting Total Amount, the following key activities were completed:
 
 - Data Cleaning & Preparation :
-The dataset was reviewed for consistency, missing values, and correct data types. Column names were standardised and the target variable was clearly  defined to prevent data leakage. ![Data Overview](https://github.com/user-attachments/assets/b6260726-854d-42af-9b2d-48fed4a45316)
+  The dataset was reviewed for consistency, missing values, and correct data types. Column names were standardised and the target variable was clearly     defined to prevent data leakage. ![Data Overview](https://github.com/user-attachments/assets/b6260726-854d-42af-9b2d-48fed4a45316)
 
 - Feature Engineering :
-Meaningful features were created to better capture business logic, including Net Price, Discount Amount, Shipping Cost Ratio, Month, and Discount Rate Band. Categorical variables were transformed using one-hot encoding.
+  Meaningful features were created to better capture business logic, including Net Price, Discount Amount, Shipping Cost Ratio, Month, and Discount Rate   Band. Categorical variables were transformed using one-hot encoding.
 
-- Model Development
-Three regression models were developed and compared: Multiple Linear Regression (baseline), Decision Tree Regressor, and Gradient Boosting Regressor.
+- Model Development:
+  Three regression models were developed and compared:
+    - Multiple Linear Regression (baseline)
+    - Decision Tree Regressor
+    - Gradient Boosting Regressor
 
-- Model Evaluation & Validation
-Models were evaluated using R², RMSE, and MAE. A 70/30 train-test split and 5-fold cross-validation were applied to assess predictive accuracy and stability.
+- Model Evaluation & Validation:
+  Models were evaluated using R², RMSE, and MAE. A 70/30 train-test split and 5-fold cross-validation were applied to assess predictive accuracy and       stability.
 
-- Model Optimisation
-Gradient Boosting was selected as the best-performing model. Hyperparameter tuning using GridSearchCV further improved performance while maintaining strong generalization.
+- Model Optimisation:
+  Hyperparameter tuning using GridSearchCV further improved performance while maintaining strong generalization.
+
   
 ### Data Preparation
 A structured data preparation process was conducted to ensure the dataset was accurate, consistent, and ready for modelling.
