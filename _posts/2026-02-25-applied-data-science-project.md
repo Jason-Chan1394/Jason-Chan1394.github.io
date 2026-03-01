@@ -91,12 +91,13 @@ The evaluation process was designed to ensure that the selected model was not on
 
 Single-Split Model Comparison
 The first comparison was conducted using a 70/30 train-test split. Among the three models tested, Gradient Boosting clearly outperformed the others.
-
 - Gradient Boosting achieved the highest R² and lowest RMSE and MAE
 - Decision Tree performed moderately well but showed higher prediction error
 - Decision Tree Regressor to capture non-linear interactions
 
-This initial comparison established Gradient Boosting as the strongest candidate model.![Singlr-Split Model](https://github.com/user-attachments/assets/76fc0ca7-c705-439d-b7e6-1d798c5b0cbc)
+This initial comparison established Gradient Boosting as the strongest candidate model.
+![Single Split Model](https://github.com/user-attachments/assets/7b031212-05eb-49ef-a164-930648254479)
+
 
 Model Comparison After 5-Fold Cross Validation
 To ensure robustness, 5-fold cross-validation was applied.
@@ -147,8 +148,25 @@ Based on these findings, the following recommendations are proposed:
 
 Overall, integrating predictive analytics into pricing and logistics decisions can support more informed, data-driven strategies and improve revenue predictability within Amazon e-commerence business.
 
+
 ## AI Ethics
-Discuss the potential data science ethics issues (privacy, fairness, accuracy, accountability, transparency) in your project. 
+
+While this project focuses on predicting Total Amount using transactional data, it is important to consider the ethical implications of applying data science in an e-commerce environment.
+
+Privacy:
+  - Although the dataset used does not contain personally identifiable information, transactional data can still reveal purchasing patterns and behavioural          insights. In real-world applications, strict data protection policies and anonymisation practices must be enforced to safeguard customer privacy.
+
+Fairness:
+  - Features such as country or location may indirectly influence pricing or revenue predictions. Care must be taken to ensure that predictive models do not         unintentionally disadvantage specific customer groups or regions. Continuous monitoring is necessary to prevent biased outcomes.
+
+Accuracy:
+  - While the model demonstrates strong predictive performance, no model is perfectly accurate. Decisions based solely on automated predictions may lead to         incorrect pricing or operational strategies if not carefully validated. Human oversight remains important.
+
+Accountability:
+  - Clear responsibility should be defined when deploying predictive models in real business environment. Business stakeholders must understand how model outputs   are used in decision-making, particularly if they influence pricing or logistics strategies.
+
+Transparency:
+  - Using interpretable techniques such as feature importance analysis helps explain which factors drive predictions. Transparency is essential to build trust in   data-driven systems and ensure that decisions can be justified and audited when necessary.
 
 
 
