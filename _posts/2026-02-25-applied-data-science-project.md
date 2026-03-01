@@ -65,6 +65,7 @@ A structured data preparation process was conducted to ensure the dataset was ac
 
 ### Modelling
 The modelling phase began with a correlation analysis to better understand the relationships between key variables and the target variable, TotalAmount. The correlation matrix helped identify meaningful predictors such as quantity, shipping-related variables, and pricing components, while also checking for potential multicollinearity issues before model development. 
+
 ![Correlation Matrix](https://github.com/user-attachments/assets/b55cf54f-7483-4147-a58e-12678f72bd9f)
 
 Following this initial assessment, three regression models were developed and compared:
@@ -84,7 +85,7 @@ Model Optimisation:
 
 Overall, the modelling process was structured to ensure statistical reliability, minimize overfitting, and deliver a high-performing model capable of supporting revenue forecasting in an e-commerce context.
 
- 
+
 ### Evaluation
 The evaluation process was designed to ensure that the selected model was not only accurate, but also stable and reliable across different validation methods.
 
@@ -92,8 +93,8 @@ Single-Split Model Comparison
 The first comparison was conducted using a 70/30 train-test split. Among the three models tested, Gradient Boosting clearly outperformed the others.
 
 - Gradient Boosting achieved the highest R² and lowest RMSE and MAE
-- Gradient Boosting achieved the highest R² and lowest RMSE and MAE
 - Decision Tree performed moderately well but showed higher prediction error
+- Decision Tree Regressor to capture non-linear interactions
 
 This initial comparison established Gradient Boosting as the strongest candidate model.![Singlr-Split Model](https://github.com/user-attachments/assets/76fc0ca7-c705-439d-b7e6-1d798c5b0cbc)
 
@@ -102,18 +103,34 @@ To ensure robustness, 5-fold cross-validation was applied.
 - Gradient Boosting maintained the highest average R²
 - It also showed an extremely low standard deviation, indicating high stability
 - Decision Tree showed moderate consistency
-- Decision Tree showed moderate consistency
+- Linear Regression remained stable but with low explanatory power
 
 Cross-validation confirmed that the Gradient Boosting model was not overfitting and generalized well across different subsets of the data. ![5-Fold Cross Validation](https://github.com/user-attachments/assets/eaf73f3a-777c-41e2-98f2-bb61afb8e747)
 
 Final Model Comparison (Single Split vs Cross Validation)
 Comparing single-split results with cross-validation results showed:
 - Minimal performance gap for Gradient Boosting
-- Minimal performance gap for Gradient Boosting
+- Very consistent R² values between test and cross-validation
 - Strong evidence of generalization
 
 This reinforced the reliability of the model before further optimization. ![5-Fold Cross Validation](https://github.com/user-attachments/assets/d7e10c5b-702b-496c-b077-50d667019612)
 
+Before and After Hyperparameter Tuning
+Hyperparameter tuning using GridSearchCV further improved the Gradient Boosting model.
+- R² increased significantly
+- RMSE and MAE were substantially reduced
+- Model stability remained strong
+
+The tuned model demonstrated both higher predictive accuracy and improved bias–variance balance.![Hyperparameter Tuning](https://github.com/user-attachments/assets/0eebd971-2a41-4e07-ad41-5e56c9a266d7)
+
+Top 3 Feature Importance
+Feature importance analysis from the final tuned model revealed the most influential drivers of Total Amount:
+- Shipping Cost Ratio: 0.617 (strongest impact)
+- Shipping Cost: 0.218
+- Shipping Cost: 0.161
+
+This indicates that shipping-related pricing structure and basket size are the dominant factors influencing order value in this e-commerce dataset.
+![Top 3 feature Importance](https://github.com/user-attachments/assets/e2c6eecc-72f4-4420-ad23-6773e42a5edf)
 
 
 ## Recommendation and Analysis
